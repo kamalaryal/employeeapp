@@ -38,7 +38,7 @@ const CreateEmployee = ({ navigation, route }) => {
     const dispatch = useDispatch();
 
     const submitData = () => {
-        fetch('https://2cd99ec7.ngrok.io/send-data', {
+        fetch('http://localhost:3000/send-data', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -62,7 +62,7 @@ const CreateEmployee = ({ navigation, route }) => {
     }
 
     const updateDetails = () => {
-        fetch("https://2cd99ec7.ngrok.io/update",{
+        fetch("http://localhost:3000/update",{
             method:"post",
             headers: { 'Content-Type': 'application/json' },
             body:JSON.stringify({
@@ -128,7 +128,7 @@ const CreateEmployee = ({ navigation, route }) => {
         const formData = new FormData();
         formData.append('image', image);
 
-        fetch('https://2cd99ec7.ngrok.io/upload', {
+        fetch('http://localhost:3000/upload', {
             method: 'post',
             body: formData
         })

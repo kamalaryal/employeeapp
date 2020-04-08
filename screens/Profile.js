@@ -19,7 +19,7 @@ const Profile = (props) => {
     const dispatch = useDispatch();
 
     const deleteEmploye = () => {
-        fetch("https://2cd99ec7.ngrok.io/delete", {
+        fetch("http://localhost:3000/delete", {
             method: "post",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: _id })
@@ -44,7 +44,7 @@ const Profile = (props) => {
             <View style={{alignItems: 'center'}}>
                 <Image
                     style={{width:140, height:140, borderRadius:70, marginTop: -50}}
-                    source={{uri: `https://2cd99ec7.ngrok.io${picture}` }}
+                    source={{uri: `http://localhost:3000${picture}` }}
                 />
             </View>
             <View style={{alignItems: 'center', margin: 15}}>

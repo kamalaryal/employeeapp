@@ -13,7 +13,7 @@ const Home = ({ navigation }) => {
     });
 
     useEffect(() => {
-        fetch('https://2cd99ec7.ngrok.io/', {
+        fetch('http://localhost:3000/', {
             method: 'get'
         })
         .then(res => res.json())
@@ -29,7 +29,7 @@ const Home = ({ navigation }) => {
     }, []);
 
     const fetchData = () => {
-        fetch('https://2cd99ec7.ngrok.io/', {
+        fetch('http://localhost:3000/', {
             method: 'get'
         })
         .then(res => res.json())
@@ -48,7 +48,7 @@ const Home = ({ navigation }) => {
         return (
             <Card style={styles.mycard} onPress={() => navigation.navigate('Profile', { item })} key={index}>
             <View style={styles.cardView} key={index}>
-                <Image style={{width:60, height:60, borderRadius:30}} source={{uri: `https://2cd99ec7.ngrok.io${item.picture}` }} />
+                <Image style={{width:60, height:60, borderRadius:30}} source={{uri: `http://localhost:3000${item.picture}` }} />
                 <View style={{marginLeft: 10}}>
                     <Text style={styles.text}>{item.name}</Text>
                     <Text>{item.position}</Text>
